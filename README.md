@@ -24,7 +24,7 @@ ConsumeablesEat
 
 ConsumeablesDrink
 	
-	["bebida_pequena"] = math.random(40, 50),
+	["small_drink"] = math.random(40, 50),
 	["milkshake"] = math.random(40, 50),
 	["cocacola"] = math.random(40, 50),
 	
@@ -94,7 +94,7 @@ qb-smallresources/server/consumables.lua
 	end)
 
 
-	QBCore.Functions.CreateUseableItem("bebida_pequena", function(source, item)
+	QBCore.Functions.CreateUseableItem("small_drink", function(source, item)
 	    local Player = QBCore.Functions.GetPlayer(source)
 		if Player.Functions.RemoveItem(item.name, 1, item.slot) then
 		TriggerClientEvent("consumables:client:bs_beber", source, item.name)
@@ -249,7 +249,7 @@ qb-core/shared/items.lua
 		["batatas_fritas"] 			= {["name"] = "batatas_fritas", 		["label"] = "Batatas", 					["weight"] = 125, 		["type"] = "item", 		["image"] = "bs_fries.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Sates Hunger."},
 
 		-- Drinks
-		["bebida_pequena"] 			 = {["name"] = "bebida_pequena", 		["label"] = "Coca cola grande", 		["weight"] = 125, 		["type"] = "item", 		["image"] = "bs_softdrink.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Uma cola fresquinha"},
+		["small_drink"] 			 = {["name"] = "small_drink", 		["label"] = "Coca cola grande", 		["weight"] = 125, 		["type"] = "item", 		["image"] = "bs_softdrink.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Uma cola fresquinha"},
 		["milkshake"] 			     = {["name"] = "milkshake", 			["label"] = "Batido", 					["weight"] = 125, 		["type"] = "item", 		["image"] = "bs_milkshake.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hand-scooped for you!"},
 		["cocacola"] 			 	 = {["name"] = "cocacola", 				["label"] = "Coca cola pequena", 		["weight"] = 125, 		["type"] = "item", 		["image"] = "bs_copopequeno_cola.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Uma cola fresquinha"},
 
